@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Jose Hernandez",
+        "email": "j.hernandez@hotmail.com",
+        "password": "password12345",
+        "role": "doctor"
+    },
+    {
+        "id": 2,
+        "name": "John Smith",
+        "email": "j.smith@hotmail.com",
+        "password": "password12345",
+        "role": "doctor"
+    },
+    {
+        "id": 3,
+        "name": "Sandra Mendoza",
+        "email": "s.mendoza@hotmail.com",
+        "password": "password12345",
+        "role": "doctor"
+    },
+    {
+        "id": 4,
+        "name": "Kilisi Vazquez",
+        "email": "k.vazquez@gmail.com",
+        "password": "password12345",
+        "role": "doctor"
+    },
+    {
+        "id": 5,
+        "name": "Jennyfer Constanza",
+        "email": "j.constanza@gmail.com",
+        "password": "password12345",
+        "role": "doctor"
+    }
+  ]
+  
