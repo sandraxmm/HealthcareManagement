@@ -8,7 +8,7 @@ class Doctor extends Model {
   }
 }
 
-User.init(
+Doctor.init(
   {
     id: {
       type: DataTypes.INTEGER,
