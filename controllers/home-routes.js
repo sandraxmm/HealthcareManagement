@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 //// GET route for getting all of the dishes that are on the menu
 //router.get('/', async (req, res) => {
 //// This method is rendering the 'all' Handlebars.js template. This is how we connect each route to the correct template.
-  //res.render('all');
+  //res.render('homepage');
 //});
 
 //get login template, this method renders the 'login' template
