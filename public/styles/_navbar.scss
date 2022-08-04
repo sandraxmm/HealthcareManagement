@@ -2,32 +2,29 @@
 @import 'mediaqueries';
 
 %align-center {
-    display: flex;
-    align-items: center;
+  align-items: center;
 }
-
 .navbar {
-    background: $lightblue;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem calc((100vw-1200px)/2);
-    z-index: 10;
-    position: relative;
-
-&_logo{
-    color: $dark;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+  
+  &_logo {
+    color: $white;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     margin-left: 24px;
     @extend %align-center;
   }
-&_bars {
+   &_bars {
     opacity: 0;
 
     @include tablet {
-      color: $dark;
+      color: $black;
       opacity: 1;
       position: absolute;
       top: 22px;
@@ -35,7 +32,7 @@
       font-size: 2rem;
     }
   }
- &_menu {
+  &_menu {
     @extend %align-center;
     list-style: none;
     text-align: center;
@@ -45,17 +42,7 @@
       display: none;
     }
   &--links {
-      color: $dark;
-      @extend %align-center;
-      justify-content: center;
-      text-decoration: none;
-      padding: 0 1rem;
-
-      &:hover {
-        color: $lime;
-        transition: all 0.3s ease;
-      }
-    }
-  }
+      color: $black;
 }
-
+}
+}
