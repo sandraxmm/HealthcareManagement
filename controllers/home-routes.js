@@ -1,19 +1,21 @@
 const router = require('express').Router();
+const { Doctor, Patient } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const projectData = await Project.findAll({
+    const patientData = await Patient.findAll({
       include: [
         {
-          model: User,
+          model: Doctor,
           attributes: ['name'],
         },
       ],
     });
 
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const patients = patientData.map((patient) => patient.get({ plain: true }));
     res.render('homepage', { 
-      projects, 
+      patients, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -21,21 +23,21 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/patient/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const patientData = await Patient.findByPk(req.params.id, {
       include: [
         {
-          model: User,
+          model: Doctor,
           attributes: ['name'],
         },
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const patient = patientData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('patient', {
+      ...patient,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -45,15 +47,15 @@ router.get('/project/:id', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
+    const doctorData = await Doctor.findByPk(req.session.doctor_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Doctor }],
     });
 
-    const user = userData.get({ plain: true });
+    const doctor = doctorData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      ...doctor,
       logged_in: true
     });
   } catch (err) {
