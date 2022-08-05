@@ -23,7 +23,7 @@
         <div class="navbar__menu">
           <a href="/views/homepage.handlebars" class="navbar__menu--links" id="navbar_menu--links">Home</a>
           <a href="/views/finddoctor.handlebars" target="_blank" class="navbar__menu--links" id="navbar_menu--links">Find a Doctor</a>
-          <a href="/views/contact.handlebars" class="navbar__menu--links" id="navbar_menu--links">Contact Us</a>
+          <a href="/views/" class="navbar__menu--links" id="navbar_menu--links">Contact Us</a>
           <a href="/views/login.handlebars" class="navbar__menu--links" id="navbar_menu--links">Log In</a>
         </div>
       </nav>
@@ -34,19 +34,45 @@
      <!--section for logo or generic hospital picture that will display under navbar-->
     <div class="hero">
         <div class="hero_container">
-            <img src="/public/images/generichospital.jpeg" alt="hospital" class="hero_container--img">
+            <img src="/public/images/groupofstaff.jpeg" alt="hospital" class="hero_container--img">
         </div>
     </div>
    
-  
+  <!--aside starts-->
       <aside>
-        <div id="aboutUs">
-          <h2>About Us</h2>
-          <p>
-            Since our founding in 2022 as the Los Angeles Hospital, countless patients have entrusted our physicians, nurses and associates with their health care needs. Today, we are the largest medical center serving the Los Angeles County.
-          </p>
+        <div id="doctors">
+          <h2>Find a Doctor</h2>
+          <ul id="listOfDoctors">
+            <li> Jose Hernandez
+              <p>Dr. Hernandez is a caring and dedicated primary care doctor and family physician serving patients in Los Angeles, CA. Dr. Hernandez can communicate with his patients in English, Spanish, and French.
+            Dr. Hernandez received his medical degree from Medical University, and he completed his residency in family medicine through the Los Angeles Hospital.
+            </p>
+            </li>
+            <li>John Smith
+              <p>
+              Dr. Smith is a Family Medicine Specialist in Los Angeles, CA and has over 51 years of experience in the medical field. He graduated from Medical University in 1971.  
+            </p>
+            </li>
+            <li>Sandra Mendoza
+              <p>
+             Dr. Mendoza is a board-certified in adult psychiatry, and has experience to treat all ages. She completed her residencies at the University of Medicine where she served as chief resident at the Centre for Addiction and Mental Health and the Hospital for Sick Children.
+            </p>
+            </li>
+            <li>Kilisi Vazquez
+              <p>
+             When you have skin concerns, it is important to feel completely comfortable with your clinician. Dr.Vazquez offers compassionate care for residents of the Los Angeles area.
+            </p>
+            </li>
+            <li>Jennyfer Constanza
+              <p>
+              Dr. Constanza brings a unique perspective to her work as a radiation oncologist. She is well-versed in many forms of radiation therapy including image-guided radiation therapy, intensity modulated radiation therapy.
+            </p>
+            </li>
+          </ul>
         </div>
       </aside>
+<!--end of aside-->
+<!--article starts-->
       <article class="content">
          <section class="appointment" id="appointment">
           <div class="row">
@@ -69,7 +95,7 @@
           </ul>
         </section>
       </article>
-     
+<!--end of article-->
 <!--footer starts-->
        <footer class="footer" id="footer">
         <div class="row1">
@@ -147,5 +173,5 @@
     src="https://kit.fontawesome.com/4f208ec3f2.js"
     crossorigin="anonymous"
   ></script>
-  <!--link for login form and appointment form javascript will go here-->
+  <!--sripct tag for login form-->
 </html>
