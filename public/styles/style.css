@@ -222,6 +222,73 @@ footer ul {
   color: var(--white-color);
   padding: 3px;
 }
+
+*login form container*/
+.container{
+	position: relative;
+	margin-top: 100px;
+	width: 450px;
+	height: auto;
+	background: var(--gray-color);
+	border-radius: 5px;
+}
+.label{
+	padding: 20px 130px;
+	font-size: 35px;
+	font-weight: bold;
+	color: var(--white-color);
+}
+.login_form{
+	padding: 20px 40px;
+}
+.login_form .font{
+	font-size: 18px;
+	color: var(--white-color);
+	margin: 5px 0;
+}
+.login_form input{
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+	border: 1px solid var(--gray-color);
+}
+.login_form .font2{
+	margin-top: 30px;
+}
+.login_form button{
+	margin: 45px 0 30px 0;
+	height: 45px;
+	width: 365px;
+	font-size: 20px;
+	color: var(--gray-color);
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: var(--white-color);
+	border-radius: 3px;
+	border: 1px solid var(--gray-color);
+}
+.login_form button:hover{
+	background: var(--gray-color);
+  color: var(--white-color);
+}
+.login_form #email_error,
+.login_form #pass_error{
+	margin-top: 5px;
+	width: 345px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}
+
+
 /*media queries styling*/
 @media only screen 
   and (max-width:600px){
