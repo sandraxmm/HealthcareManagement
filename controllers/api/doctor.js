@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const User = require('../../models/Doctor');
+const Doctor = require('../../models/Doctor');
 const withAuth = require('../../utils/auth');
 const { Doctor } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const doctorData = await User.create(req.body);
+    const doctorData = await Doctor.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = doctorData.id;
+      req.session.doctor_id = doctorData.id;
       req.session.logged_in = true;
 
       res.status(200).json(doctorData);
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const doctorData = await User.findOne({ where: { email: req.body.email } });
+    const doctorData = await Doctor.findOne({ where: { email: req.body.email } });
 
     if (!doctorData) {
       res
@@ -40,10 +40,10 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = doctorData.id;
+      req.session.doctor_id = doctorData.id;
       req.session.logged_in = true;
       
-      res.json({ user: doctorData, message: 'You are now logged in!' });
+      res.json({ doctor: doctorData, message: 'Welcome in, Doc!' });
     });
 
   } catch (err) {
