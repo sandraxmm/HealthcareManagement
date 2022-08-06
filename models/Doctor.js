@@ -23,7 +23,6 @@ Doctor.init(
     phone: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
         validate: {
             len: [12],
         },
@@ -31,7 +30,6 @@ Doctor.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         isEmail: true,
       },

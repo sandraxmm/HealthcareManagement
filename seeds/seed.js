@@ -15,7 +15,7 @@ const seedDatabase = async () => {
   for (const project of patientData) {
     await Patient.create({
       ...project,
-      doctor_id: users[Math.floor(Math.random() * doctors.length)].id,
+      doctor_id: doctors[Math.floor(Math.random() * doctors.length)].id,
     });
   }
 
