@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "name": "Rosa Flores",
+        "phone": "213-555-5554",
+        "DOB": "02/28/1966",
+        "insurance": "Blue Shield",
+        "next_appointment": "08/15/2022",
+        "email": "rosa.flores@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 2,
+        "name": "Juan Perez",
+        "phone": "213-888-5555",
+        "DOB": "04/20/1986",
+        "insurance": "Blue Shield",
+        "next_appointment": "09/05/2022",
+        "email": "juan.perez@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 3,
+        "name": "Will Smith",
+        "phone": "213-999-5556",
+        "DOB": "09/25/1968",
+        "insurance": "Cigna",
+        "next_appointment": "10/25/2022",
+        "email": "will.smith@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 4,
+        "name": "Jonny Depp",
+        "phone": "213-555-5557",
+        "DOB": "06/09/1963",
+        "insurance": "Cigna",
+        "next_appointment": "09/12/2022",
+        "email": "johnny.depp@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 5,
+        "name": "Angelina Jolie",
+        "phone": "323-444-5558",
+        "DOB": "06/04/1975",
+        "insurance": "Anthem",
+        "next_appointment": "08/19/2022",
+        "email": "angelina.jolie@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 6,
+        "name": "Jennifer Affleck",
+        "phone": "323-999-5559",
+        "DOB": "07/24/1969",
+        "insurance": "Anthem",
+        "next_appointment": "08/23/2022",
+        "email": "jennifer.affleck@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 7,
+        "name": "Tom Cruise",
+        "phone": "213-777-5551",
+        "DOB": "07/03/1962",
+        "insurance": "Blue Shield",
+        "next_appointment": "08/15/2022",
+        "email": "tom.cruise@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 8,
+        "name": "Leonardo DiCaprio",
+        "phone": "323-555-8882",
+        "DOB": "11/11/1974",
+        "insurance": "Cigna",
+        "next_appointment": "09/09/2022",
+        "email": "leonardo.dicaprio@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 9,
+        "name": "Salma Hayek",
+        "phone": "213-555-3336",
+        "DOB": "09/02/1966",
+        "insurance": "Anthem",
+        "next_appointment": "10/12/2022",
+        "email": "salma.hayek@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 10,
+        "name": "Scarlett Johansson",
+        "phone": "213-555-2227",
+        "DOB": "11/22/1984",
+        "insurance": "Blue Shield",
+        "next_appointment": "08/11/2022",
+        "email": "scarlett.johansson@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 11,
+        "name": "Ryan Reynolds",
+        "phone": "323-222-3333",
+        "DOB": "10/23/1976",
+        "insurance": "Cigna",
+        "next_appointment": "08/11/2022",
+        "email": "ryan.reynolds@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    },
+    {
+        "id": 12,
+        "name": "Margot Robbie",
+        "phone": "323-444-2227",
+        "DOB": "07/02/1990",
+        "insurance": "Anthem",
+        "next_appointment": "08/11/2022",
+        "email": "margot.robbie@gmail.com",
+        "password": "password123",
+        "patient_notes": ""
+    }
+]

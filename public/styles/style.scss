@@ -1,0 +1,16 @@
+@import 'navbar';
+@import 'section';
+
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: $teal;
+}
+.hero_container--img {
+      height: 100%;
+      width: 100%;
+    }
