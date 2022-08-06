@@ -8,7 +8,7 @@ const sequelize = require('./config/connection');
 const routes = require('./controllers')
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 const hbs = exphbs.create({});
 
@@ -17,7 +17,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname,'public')));
-app.use(require('./controllers/home-routes.js'));
+app.use(require('./controllers/web-routes.js'));
 
 
 app.use(express.json());
