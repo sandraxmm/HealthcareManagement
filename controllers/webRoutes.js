@@ -23,10 +23,12 @@ router.get('/', async (req, res) => {
       logged_in: req.session?.logged_in 
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
+//get patient data from specific id
 router.get('/patient/:id', async (req, res) => {
   try {
     const patientData = await Patient.findByPk(req.params.id, {
