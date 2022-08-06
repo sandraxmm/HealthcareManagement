@@ -73,7 +73,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   //redirect request to other route when docto is already logged in
-  if (req.session.logged_in) {
+  if (req.session?.logged_in) {
     res.redirect('/profile');
     return;
   }
