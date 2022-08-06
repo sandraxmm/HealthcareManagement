@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const Doctor = require('../../models/Doctor');
 const withAuth = require('../../utils/auth');
 const { Doctor } = require('../../models');
 
@@ -19,6 +18,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//doctor log in
 router.post('/login', async (req, res) => {
   try {
     const doctorData = await Doctor.findOne({ where: { email: req.body.email } });
