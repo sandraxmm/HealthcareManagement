@@ -55,6 +55,7 @@ Patient.init(
     },
     notes: {
         type: DataTypes.STRING,
+        allowNull: true,
     }
   },
   {

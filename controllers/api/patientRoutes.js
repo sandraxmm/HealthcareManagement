@@ -1,13 +1,15 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
+
 const withAuth = require('../../utils/auth');
 const { Patient } = require('../../models');
 
+//allows doctor to create a new patient
 router.post('/', withAuth, async (req, res) => {
     try {
       const newPatient = await Patient.create({
         ...req.body,
-        patient_id: req.session.patient_id,
+        doctor_id: req.session.doctor_id,
       });
   
       res.status(200).json(newPatient);
@@ -15,13 +17,14 @@ router.post('/', withAuth, async (req, res) => {
       res.status(400).json(err);
     }
   });
-  
+ 
+  //allows doctor to delete patient
   router.delete('/:id', withAuth, async (req, res) => {
     try {
       const patientData = await Patient.destroy({
         where: {
           id: req.params.id,
-          patient_id: req.session.patient_id,
+          doctor_id: req.session.doctor_id,
         },
       });
   
@@ -37,4 +40,3 @@ router.post('/', withAuth, async (req, res) => {
   });
   
   module.exports = router;
-  

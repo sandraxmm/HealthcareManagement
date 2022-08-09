@@ -2,37 +2,37 @@
     {
         "id": 1,
         "name": "Jose Hernandez",
+        "phone": "323-123-4567",
         "email": "j.hernandez@hotmail.com",
-        "password": "password12345",
-        "role": "doctor"
+        "password": "password12345"
     },
     {
         "id": 2,
         "name": "John Smith",
+        "phone": "323-123-4567",
         "email": "j.smith@hotmail.com",
-        "password": "password12345",
-        "role": "doctor"
+        "password": "password12345"
     },
     {
         "id": 3,
         "name": "Sandra Mendoza",
+        "phone": "323-123-4567",
         "email": "s.mendoza@hotmail.com",
-        "password": "password12345",
-        "role": "doctor"
+        "password": "password12345"
     },
     {
         "id": 4,
         "name": "Kilisi Vazquez",
+        "phone": "323-123-4567",
         "email": "k.vazquez@gmail.com",
-        "password": "password12345",
-        "role": "doctor"
+        "password": "password12345"
     },
     {
         "id": 5,
         "name": "Jennyfer Constanza",
+        "phone": "323-123-4567",
         "email": "j.constanza@gmail.com",
-        "password": "password12345",
-        "role": "doctor"
+        "password": "password12345"
     }
   ]
   
