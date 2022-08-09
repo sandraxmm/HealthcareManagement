@@ -7,7 +7,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
       const newPatient = await Patient.create({
         ...req.body,
-        patient_id: req.session.patient_id,
+        doctor_id: req.session.doctor_id,
       });
   
       res.status(200).json(newPatient);
@@ -21,7 +21,7 @@ router.post('/', withAuth, async (req, res) => {
       const patientData = await Patient.destroy({
         where: {
           id: req.params.id,
-          patient_id: req.session.patient_id,
+          doctor_id: req.session.doctor_id,
         },
       });
   
