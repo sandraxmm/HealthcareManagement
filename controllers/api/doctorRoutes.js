@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//doctor log in
 router.post('/login', async (req, res) => {
   try {
     const doctorData = await Doctor.findOne({ where: { email: req.body.email } });
