@@ -62,6 +62,9 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const doctor = doctorData.get({ plain: true });
 
+console.log("about to log doctor data");
+console.log(doctor);
+
     res.render('profile', {
       ...doctor,
       logged_in: true
