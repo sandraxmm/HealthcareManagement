@@ -1,14 +1,16 @@
 //display patients assigned to doctor
-// const patientListHandler = async (event) => {
-//     event.preventDefault();
-
-//     if(doctor_id === id) {
-//         const response = await fetch(`/api/patients`, {
-//             method: 'GET',
-            
-//         })
-//     }
-// };
+const patientListHandler = async (event) => {
+    event.preventDefault();
+    if(doctor_id === doctor.id) {
+        const response = await fetch(`/api/patients`, {
+            method: 'GET',
+            body: JSON.stringify({ name, phone, DOB, insurance, appointment, email }),
+        });
+        if (response.ok) {
+          display
+        }
+    }
+};
 
 //create new patient entry
 const newFormHandler = async (event) => {
@@ -43,7 +45,7 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/projects/${id}`, {
+      const response = await fetch(`/api/patients/${id}`, {
         method: 'DELETE',
       });
   
@@ -56,10 +58,10 @@ const delButtonHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-project-form')
+    .querySelector('.new-patient-form')
     .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.project-list')
+    .querySelector('.patient-list')
     .addEventListener('click', delButtonHandler);
   
