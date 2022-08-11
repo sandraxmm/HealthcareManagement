@@ -29,8 +29,10 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/finddoctor', async (req, res) => {
-    res.render('finddoctor');
+    res.render('finddoctor', {
+      logged_in: req.session.logged_in
     });
+});
 
 //get patient data from specific id
 router.get('/patient/:id', async (req, res) => {
