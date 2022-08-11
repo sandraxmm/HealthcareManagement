@@ -11,14 +11,13 @@ const newFormHandler = async (event) => {
     const email = document.querySelector('#patient-email').value.trim();
   
     if (name && phone && DOB && insurance && appointment && email) {
-      const response = await fetch(`api/patients`, {
+      const response = await fetch(`/api/patients`, {
         method: 'POST',
         body: JSON.stringify({ name, phone, DOB, insurance, appointment, email }),
         headers: {
           'Content-Type': 'application/json'
         },
       });
-      console.log(fetch(`api/patients`));
       if (response.ok) {
         document.location.replace('/profile');
       } else {
@@ -32,7 +31,7 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`api/patients/${id}`, {
+      const response = await fetch(`/api/patients/${id}`, {
         method: 'DELETE',
       });
   

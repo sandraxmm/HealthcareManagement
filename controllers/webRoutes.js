@@ -50,7 +50,7 @@ router.get('/patient/:id', async (req, res) => {
 
     res.render('patient', {
       ...patient,
-      logged_in: req.session?.logged_in
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
