@@ -20,13 +20,13 @@
           <i class="fa-solid fa-bars"></i>
         </div>
         <div class="navbar__menu">
-          <a href="/homepage" class="navbar__menu--links" id="navbar_menu--links">Home</a>
+          <a href="/" class="navbar__menu--links" id="navbar_menu--links">Home</a>
           <a href="/finddoctor" target="_blank" class="navbar__menu--links" id="navbar_menu--links">Find a Doctor</a>
           <a href="/contact" class="navbar__menu--links" id="navbar_menu--links">Contact Us</a>
 
           {{#if logged_in}}
           <a href="/profile">Profile</a> |
-          <a href="/homepage">Logout</a>
+          <a href="/">Logout</a>
           {{else}}
           <a href="/login">Login</a>
           {{/if}}
