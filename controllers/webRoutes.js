@@ -3,33 +3,30 @@ const { Doctor, Patient } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('homepage');
-  });
-// router.get('/', async (req, res) => {
-//   try {
-//     //get patients assigned to doctor
-//     const patientData = await Patient.findAll({
-//       include: [
-//         {
-//           model: Doctor,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
+  try {
+    //get patients assigned to doctor
+    const patientData = await Patient.findAll({
+      include: [
+        {
+          model: Doctor,
+          attributes: ['name'],
+        },
+      ],
+    });
 
-//     //Serialize data so the template can read it
-//     const patients = patientData.map((patient) => patient.get({ plain: true }));
+    //Serialize data so the template can read it
+    const patients = patientData.map((patient) => patient.get({ plain: true }));
 
-//     //pass serialized data and session flag into template
-//     res.render('homepage', { 
-//       patients, 
-//       logged_in: req.session?.logged_in 
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+    //pass serialized data and session flag into template
+    res.render('homepage', { 
+      patients, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get('/finddoctor', async (req, res) => {
     res.render('finddoctor');
@@ -83,7 +80,7 @@ console.log(doctor);
 
 router.get('/login', (req, res) => {
   //redirect request to other route when docto is already logged in
-  if (req.session?.logged_in) {
+  if (req.session.logged_in) {
     res.redirect('/profile');
     return;
   }

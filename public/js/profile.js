@@ -1,15 +1,3 @@
-//display patients assigned to doctor
-// const patientListHandler = async (event) => {
-//     event.preventDefault();
-//     if(doctor_id === doctor.id) {
-//         const response = await fetch(`/api/patients`, {
-//             method: 'GET',
-//         });
-//         if (response.ok) {
-//           display
-//         }
-//     }
-// };
 
 //create new patient entry
 const newFormHandler = async (event) => {
@@ -62,5 +50,5 @@ const delButtonHandler = async (event) => {
   
   document
     .querySelector('.patient-list')
-    // .addEventListener('click', delButtonHandler);
+    .addEventListener('click', delButtonHandler);
   
