@@ -76,7 +76,7 @@ padding: 3px;
 /*aside styling*/
 aside {
   background: var(--blue-color);
-  float: right;
+  float: left;
   clear: both;
   width: 50%;
   color: var(--white-color);

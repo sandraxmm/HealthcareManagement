@@ -26,7 +26,11 @@
 
           {{#if logged_in}}
           <a href="/profile">Profile</a> |
+<<<<<<< HEAD
           <a href="/">Logout</a>
+=======
+          <button class="no-button" id="logout">Logout</button>
+>>>>>>> develop
           {{else}}
           <a href="/login">Login</a>
           {{/if}}
@@ -38,6 +42,7 @@
     <div class="hero">
         <div class="hero_container">
             <img src="./images/generichospital.jpeg" alt="hospital" class="hero_container--img">
+            <img src="./images/P2Logo.jpg" alt="logo" class="hero_container--img">
         </div>
     </div>
 
@@ -58,13 +63,13 @@
                     <p><i class="fa-solid fa-envelope"></i>sandraxmendoza@gmail.com</p>
                 </li>
                 <li>
-                    <p><i class="fa-solid fa-phone"></i> (xxx)xxxxxx</p>
+                    <p><i class="fa-solid fa-phone"></i> (562)986-8409</p>
                 </li>
                 <li>
-                    <a href="#" target="_blank" role="button">
+                    <a href="https://www.linkedin.com/in/sandra-mendoza-mba-12292b194/" target="_blank" role="button">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a  href="#" target="_blank" role="button">
+                    <a  href="https://github.com/sandraxmm" target="_blank" role="button">
                          <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
@@ -80,10 +85,10 @@
                     <p><i class="fa-solid fa-phone"></i>(415) 310-4533</p>
                 </li>
                 <li>
-                    <a href="#!" target="_blank" role="button">
+                    <a href="https://www.linkedin.com/in/kilisi-vazquez-b1089171/" target="_blank" role="button">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a  href="#!" target="_blank" role="button">
+                    <a  href="https://github.com/GG-EZ415" target="_blank" role="button">
                          <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
@@ -118,10 +123,11 @@
 <!--end of footer-->
     </section>
 
-  <script
-    src="https://kit.fontawesome.com/4f208ec3f2.js"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://kit.fontawesome.com/4f208ec3f2.js" crossorigin="anonymous"></script>
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
     
   </body>
   <!--link for login form and appointment form javascript will go here-->
