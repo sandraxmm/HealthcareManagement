@@ -3,30 +3,37 @@ const { Doctor, Patient } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  try {
-    //get patients assigned to doctor
-    const patientData = await Patient.findAll({
-      include: [
-        {
-          model: Doctor,
-          attributes: ['name'],
-        },
-      ],
-    });
+  res.render('homepage');
+  });
+// router.get('/', async (req, res) => {
+//   try {
+//     //get patients assigned to doctor
+//     const patientData = await Patient.findAll({
+//       include: [
+//         {
+//           model: Doctor,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    //Serialize data so the template can read it
-    const patients = patientData.map((patient) => patient.get({ plain: true }));
+//     //Serialize data so the template can read it
+//     const patients = patientData.map((patient) => patient.get({ plain: true }));
 
-    //pass serialized data and session flag into template
-    res.render('homepage', { 
-      patients, 
-      logged_in: req.session?.logged_in 
+//     //pass serialized data and session flag into template
+//     res.render('homepage', { 
+//       patients, 
+//       logged_in: req.session?.logged_in 
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
+
+router.get('/finddoctor', async (req, res) => {
+    res.render('finddoctor');
     });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 //get patient data from specific id
 router.get('/patient/:id', async (req, res) => {
