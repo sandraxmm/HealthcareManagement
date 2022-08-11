@@ -28,6 +28,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/', async (req, res) => {
+  try {
+    const doctorData = await Doctor.findAll({
+      include: [ 
+        {
+        model: Doctor,
+        attributes: ['name'],
+      },
+      ],
+    });
+    const doctors = doctorData.map((doctor) => doctor.get({ plain: true }));
+    res.render('finddoctor', { 
+      doctors, 
+      logged_in: req.session?.logged_in 
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 //get patient data from specific id
 router.get('/patient/:id', async (req, res) => {
   try {
