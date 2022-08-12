@@ -39,13 +39,6 @@ Patient.init(
         isEmail: true,
       },
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
-    },
     doctor_id: {
       type: DataTypes.INTEGER,
       references: {

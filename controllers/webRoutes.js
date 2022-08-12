@@ -48,10 +48,7 @@ router.post('/patient/:id', async (req, res) => {
 
     const patient = patientData.get({ plain: true });
 
-    res.render('patient', {
-      ...patient,
-      logged_in: req.session.logged_in
-    });
+    res.render('patient');
   } catch (err) {
     res.status(500).json(err);
   }
