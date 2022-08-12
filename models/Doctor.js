@@ -22,7 +22,7 @@ Doctor.init(
     },
     phone: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
             len: [12],
         },
