@@ -11,7 +11,7 @@ const newFormHandler = async (event) => {
     const email = document.querySelector('#patient-email').value.trim();
   
     if (name && phone && DOB && insurance && appointment && email) {
-      const response = await fetch(`/api/patients`, {
+      const response = await fetch(`/api/patient/`, {
         method: 'POST',
         body: JSON.stringify({ name, phone, DOB, insurance, appointment, email }),
         headers: {
