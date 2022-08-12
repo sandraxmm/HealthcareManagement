@@ -5,6 +5,7 @@ const { Patient } = require('../../models');
 //allows doctor to create a new patient
 router.post('/', withAuth, async (req, res) => {
     try {
+      console.log(req.body);
       const newPatient = await Patient.create({
         ...req.body,
         doctor_id: req.session.doctor_id,

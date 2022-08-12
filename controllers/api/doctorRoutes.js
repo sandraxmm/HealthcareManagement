@@ -6,7 +6,7 @@ const { Doctor } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const doctorData = await Doctor.create(req.body);
-
+console.log(doctorData);
     req.session.save(() => {
       req.session.doctor_id = doctorData.id;
       req.session.logged_in = true;
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const doctorData = await Doctor.findOne({ where: { email: req.body.email } });
-
+console.log(doctorData);
     if (!doctorData) {
       res
         .status(400)
