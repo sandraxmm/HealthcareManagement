@@ -28,7 +28,7 @@ Patient.init(
         allowNull: false,
         unique: true,
         validate: {
-            len: [12],
+            len: [10],
         },
     },
     email: {
