@@ -35,7 +35,7 @@ router.get('/finddoctor', async (req, res) => {
 });
 
 //get patient data from specific id
-router.get('/patient/:id', async (req, res) => {
+router.post('/patient/:id', async (req, res) => {
   try {
     const patientData = await Patient.findByPk(req.params.id, {
       include: [
