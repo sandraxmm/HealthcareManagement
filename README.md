@@ -41,6 +41,8 @@ As a user, I want to be able to create patients and delete them from my list of 
 
 
 ## Website
-insert website link here 
+https://intense-headland-25036.herokuapp.com/
+
+https://github.com/sandraxmm/HealthcareManagement
 
 ![HealthcareManagement](public/images/P2Logo.jpg)
