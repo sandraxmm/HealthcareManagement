@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     //pass serialized data and session flag into template
     res.render('homepage', { 
       patients, 
-      logged_in: req.session?.logged_in 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     console.log(err);
@@ -28,8 +28,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/finddoctor', async (req, res) => {
+    res.render('finddoctor', {
+      logged_in: req.session.logged_in
+    });
+});
+
 //get patient data from specific id
-router.get('/patient/:id', async (req, res) => {
+router.post('/patient/:id', async (req, res) => {
   try {
     const patientData = await Patient.findByPk(req.params.id, {
       include: [
@@ -42,10 +48,7 @@ router.get('/patient/:id', async (req, res) => {
 
     const patient = patientData.get({ plain: true });
 
-    res.render('patient', {
-      ...patient,
-      logged_in: req.session?.logged_in
-    });
+    res.render('patient');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -61,6 +64,9 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const doctor = doctorData.get({ plain: true });
+
+console.log("about to log doctor data");
+console.log(doctor);
 
     res.render('profile', {
       ...doctor,

@@ -28,7 +28,7 @@ Patient.init(
         allowNull: false,
         unique: true,
         validate: {
-            len: [12],
+            len: [10],
         },
     },
     email: {
@@ -37,13 +37,6 @@ Patient.init(
       unique: true,
       validate: {
         isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
       },
     },
     doctor_id: {

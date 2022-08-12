@@ -1,151 +1,62 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Healthcare Management</title>
-  </head>
-  <body>
-    <header>
-      <!--navbar starts-->
-      <nav class="navbar">
-        <a href="/views/layouts/main.handlebars" class="navbar_logo">Healthcare Management</a>
-        <div class="navbar_bars">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="navbar__menu">
-          <a href="/views/homepage.handlebars" class="navbar__menu--links" id="navbar_menu--links">Home</a>
-          <a href="/views/finddoctor.handlebars" target="_blank" class="navbar__menu--links" id="navbar_menu--links">Find a Doctor</a>
-          <a href="/views/contact.handlebars" class="navbar__menu--links" id="navbar_menu--links">Contact Us</a>
-          <a href="/views/login.handlebars" class="navbar__menu--links" id="navbar_menu--links">Log In</a>
-        </div>
-      </nav>
-      <!--end of navbar-->
-
-    </header>
-    <!--end of header-->
-     <!--section for logo or generic hospital picture that will display under navbar-->
-    <div class="hero">
-        <div class="hero_container">
-            <img src="/public/images/generichospital.jpeg" alt="hospital" class="hero_container--img">
-        </div>
-    </div>
-   
-  
-      <aside>
-        <div id="aboutUs">
+<!--article starts-->
+      <article>
+        <!--section for logo-->
+        <section class="logo">
+          <div class="logo_container">
+            <img src="https://www.canva.com/design/DAFI4g3uEUg/0_QERhUwpv_kRIb7Z8ODTQ/edit?utm_content=DAFI4g3uEUg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" alt="logo">
+          </div>
+        </section>
+        <!--about us section-->
+        <section id="aboutUs">
           <h2>About Us</h2>
           <p>
             Since our founding in 2022 as the Los Angeles Hospital, countless patients have entrusted our physicians, nurses and associates with their health care needs. Today, we are the largest medical center serving the Los Angeles County.
           </p>
-        </div>
-      </aside>
-      <article class="content">
-         <section class="appointment" id="appointment">
-          <div class="row">
-            <form action="">
-              <h2>Book an appointment</h2>
-            <input type="text" placeholder="Your name" class="box">
-            <input type="number" placeholder="Your phone number" class="box">
-            <input type="email" placeholder="Your email" class="box">
-            <input type="date" class="box">
-            <input type="submit" value="Book now" class="btn">
-            </form>
-          </div>
         </section>
-        <section id="insurances">
+        <!--list of insurances section-->
+       <section id="insurances">
           <h2>List of insurance accepted</h2>
           <ul id="listOfInsurances">
               <li>Cigna</li>
               <li>Blue Shield of California Life</li>
               <li>Anthem Blue Cross Blue Shield</li>
           </ul>
-        </section>
+       </section>
       </article>
-     
-<!--footer starts-->
-       <footer class="footer" id="footer">
-        <div class="row1">
-            <h3 class="title-centered">Get connected with us:</h3>
+<!--end of article-->
+<!--aside starts-->
+      <aside>
+  <!--location and hours information-->
+        <div id="contactUs">
+          <h2>Contact Us</h2>
+          <ul id="locationAndHours">
+            <li>Location</li>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105822.65639734369!2d-118.32673428359377!3d34.01928869999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cf3f6ad0616f%3A0xeaacc414d0daa3be!2sLos%20Angeles%20Community%20Hospital!5e0!3m2!1sen!2sus!4v1660090670720!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <li>Hours
+              <p>
+              Monday: 9:00am - 5:00pm
+              <br>
+              Tuesday: 9:00am - 5:00pm
+              <br>
+              Wednesday: 9:00am - 5:00pm
+              <br>
+              Thursday: 9:00am - 5:00pm
+              <br>
+              Friday: 9:00am - 5:00pm
+              <br>
+              Saturday: 9:00am - 5:00pm
+              <br>
+              Sunday: CLOSED
+              </p>
+            </li>
+            <li>Phone Number
+                <p>
+                (626) 555 - 5555
+              </p>
+            </li>
+          </ul>
         </div>
-        <div class="row2">
-             <div class="col1">
-             <h3>Sandra Mendoza</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i>sandraxmendoza@gmail.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i> (xxx)xxxxxx</p>
-                </li>
-                <li>
-                    <a href="#" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="#" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col2">
-             <h3>Kilisi Vazquez</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i> kilisivazquez@yahoo.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i>(415) 310-4533</p>
-                </li>
-                <li>
-                    <a href="#!" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="#!" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col3">
-             <h3>Jennyfer Constanza</h3>
-            <ul>
-                <li>
-                    <p><i class="fa-solid fa-envelope"></i> jennyferislas@gmail.com</p>
-                </li>
-                <li>
-                    <p><i class="fa-solid fa-phone"></i> (626) 556-5577</p>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/jennyfer-constanza-6684a6235/" target="_blank" role="button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a  href="https://github.com/jennyferconstanza" target="_blank" role="button">
-                         <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        </div>
-        <div class="row3">
-            <h3>Products Used</h3>
-             <a href="https://sass-lang.com/" target="_blank">SASS</a>
-             <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
-        </div>
-    </footer>
-<!--end of footer-->
-    </section>
-  </script>
-  <script
-    src="https://kit.fontawesome.com/4f208ec3f2.js"
-    crossorigin="anonymous"
-  ></script>
-  <!--link for login form and appointment form javascript will go here-->
+    </aside>   
+ <!--end of aside-->
+  <script src="https://kit.fontawesome.com/4f208ec3f2.js"crossorigin="anonymous"></script>
 </html>
