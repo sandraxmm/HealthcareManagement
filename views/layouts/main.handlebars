@@ -13,32 +13,36 @@
   </head>
   
   <body>
+      <!--header starts-->
     <header>
+      <!--navbar starts-->
       <nav class="navbar">
-        <a href="/layouts/main" class="navbar_logo">Healthcare Management</a>
+        <a href="/layouts/main" class="navbar_logo">Los Angeles Hospital</a>
+        <!--navbar burger for mobile view-->
         <div class="navbar_bars">
           <i class="fa-solid fa-bars"></i>
         </div>
+        <!--navbar menu tabs-->
         <div class="navbar__menu">
           <a href="/" class="navbar__menu--links" id="navbar_menu--links">Home</a>
           <a href="/finddoctor" target="_blank" class="navbar__menu--links" id="navbar_menu--links">Find a Doctor</a>
           <a href="/contact" class="navbar__menu--links" id="navbar_menu--links">Contact Us</a>
 
           {{#if logged_in}}
-          <a href="/profile">Profile</a> |
-          <button class="no-button" id="logout">Logout</button>
+          <a href="/profile" class="navbar__menu--links" id="navbar_menu--links">Profile</a> |
+          <button class="no-button" id="logout" class="navbar__menu--links" id="navbar_menu--links">Logout</button>
           {{else}}
-          <a href="/login">Login</a>
+          <a href="/login" class="navbar__menu--links" id="navbar_menu--links">Login</a>
           {{/if}}
         </div>
       </nav>
+      <!--end of navbar-->
     </header>
-
+    <!--end of header-->
      <!--section for logo or generic hospital picture that will display under navbar-->
     <div class="hero">
         <div class="hero_container">
             <img src="./images/generichospital.jpeg" alt="hospital" class="hero_container--img">
-            <img src="./images/P2Logo.jpg" alt="logo" class="hero_container--img">
         </div>
     </div>
 
@@ -48,9 +52,11 @@
 
 <!--footer starts-->
        <footer class="footer" id="footer">
+        <!--row1 footer title-->
         <div class="row1">
             <h3 class="title-centered">Get connected with us:</h3>
         </div>
+        <!--row2 contact info-->
         <div class="row2">
              <div class="col1">
              <h3>Sandra Mendoza</h3>
@@ -110,6 +116,7 @@
             </ul>
         </div>
         </div>
+        <!--row3 products used-->
         <div class="row3">
             <h3>Products Used</h3>
              <a href="https://sass-lang.com/" target="_blank">SASS</a>
@@ -117,8 +124,7 @@
         </div>
     </footer>
 <!--end of footer-->
-    </section>
-
+<!--scrip tag for font awesome icons-->
   <script src="https://kit.fontawesome.com/4f208ec3f2.js" crossorigin="anonymous"></script>
 
 {{#if logged_in}}
@@ -126,5 +132,5 @@
 {{/if}}
     
   </body>
-  <!--link for login form and appointment form javascript will go here-->
+
 </html>
